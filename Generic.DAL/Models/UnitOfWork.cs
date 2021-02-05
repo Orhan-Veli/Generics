@@ -24,12 +24,15 @@ namespace Generic.DAL.Models
         {
             _genericContext.SaveChanges();
             Console.WriteLine("Kaydedildi.");
+            Console.ReadLine();
 
         }
 
         public void Dispose()
         {
             _genericContext.Dispose();
+            Console.WriteLine("*");
+            Console.ReadLine();
         }
     }
 }
