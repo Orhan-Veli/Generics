@@ -21,7 +21,7 @@ namespace Generic.DAL.Concrete
 
         public IEnumerable<T> GetAll()
         {
-           return _genericContext.Set<T>().ToList();
+           return _genericContext.Set<T>().AsEnumerable();
         }
 
         public T GetById(int id)
@@ -40,7 +40,7 @@ namespace Generic.DAL.Concrete
 
             var entity =_genericContext.Set<T>().Find(id);
             entity = Model;
-            return _genericContext.Set<T>().ToList();
+            return _genericContext.Set<T>().AsEnumerable();
         }
     }
 }
